@@ -22,41 +22,41 @@ function generatePassword() {
     let PasswordSize = prompt("How long would you like your password to be?", "")
     if(!PasswordSize) return
 
-    // Making sure the number is entered
+    // Checking if they entered a number
     if(isNaN(PasswordSize)) {
-      alert("Please only enter a number.")
+      alert("Please enter a number.")
       return
     }
     
-    // Making sure the password is at least 8 characters long
+    // Checking if password is at least 8 characters long
     if(PasswordSize < 8) {
-      alert("The password must be at least 8 characters.")
+      alert("The password is at least 8 characters.")
       return
     }
 
-    // Making sure the password is above 128 characters long
+    // Checking if password is above 128 characters long
     if(PasswordSize > 128) {
-      alert("The password may not be longer than 128 characters.")
+      alert("The password is not be longer than 128 characters.")
       return
     }
 
-    // Lowercase characters alert
-    let LowercaseAnswer = confirm("Would you like lowercase characters?")
+    // Lowercase characters prompt
+    let LowercaseAnswer = confirm("lowercase characters?")
     if(LowercaseAnswer) PasswordCharacters += lowercase
     
-    // Uppcase characters alert
-    let UppercaseAnswer = confirm("Would you like uppercase characters?")
+    // Uppcase characters prompt
+    let UppercaseAnswer = confirm("uppercase characters?")
     if(UppercaseAnswer) PasswordCharacters += uppercase
     
-    //Numeric characters alert
-    let NumberAnswer = confirm("Would you like Numeric characters?")
+    //Numeric characters prompt
+    let NumberAnswer = confirm("Numeric characters?")
     if(NumberAnswer) PasswordCharacters += numbers
 
-    //Special Characters alert
-    let SpecialAnswer = confirm("Would you like special characters?")
+    //Special Characters prompt
+    let SpecialAnswer = confirm("special characters?")
     if(SpecialAnswer) PasswordCharacters += special
     
-    // Making sure for atleast one character type 
+    // Checking if they approved at least one character type
     if(PasswordCharacters.length == 0) {
       alert("You must approve at least one character type.")
       return
