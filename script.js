@@ -19,44 +19,44 @@ function generatePassword() {
     let PasswordCharacters = ""
     let Password = ""
 
-    let PasswordSize = prompt("How long would you like your password to be?", "16")
+    let PasswordSize = prompt("How long would you like your password to be?", "")
     if(!PasswordSize) return
 
-    // Checking if they entered a number
+    // Making sure the number is entered
     if(isNaN(PasswordSize)) {
       alert("Please only enter a number.")
       return
     }
     
-    // Checking if password is at least 8 characters long
+    // Making sure the password is at least 8 characters long
     if(PasswordSize < 8) {
       alert("The password must be at least 8 characters.")
       return
     }
 
-    // Checking if password is above 128 characters long
+    // Making sure the password is above 128 characters long
     if(PasswordSize > 128) {
       alert("The password may not be longer than 128 characters.")
       return
     }
 
-    // Lowercase characters prompt
+    // Lowercase characters alert
     let LowercaseAnswer = confirm("Would you like lowercase characters?")
     if(LowercaseAnswer) PasswordCharacters += lowercase
     
-    // Uppcase characters prompt
+    // Uppcase characters alert
     let UppercaseAnswer = confirm("Would you like uppercase characters?")
     if(UppercaseAnswer) PasswordCharacters += uppercase
     
-    //Numeric characters prompt
+    //Numeric characters alert
     let NumberAnswer = confirm("Would you like Numeric characters?")
     if(NumberAnswer) PasswordCharacters += numbers
 
-    //Special Characters prompt
+    //Special Characters alert
     let SpecialAnswer = confirm("Would you like special characters?")
     if(SpecialAnswer) PasswordCharacters += special
     
-    // Checking if they approved at least one character type
+    // Making sure for atleast one character type 
     if(PasswordCharacters.length == 0) {
       alert("You must approve at least one character type.")
       return
