@@ -34,7 +34,7 @@ WHEN all prompts are answered
 
 The following image shows the web application's appearance and functionality:
 
-![GIF](photo/Password Generator.gif)
+![The website](photo/_C__Users_danie_Password-Generator_index.html.png)
 
 # Git Hub:
 *My project was pushed to GitHub at the following repository:https://github.com/syke2good/Password-Generator
